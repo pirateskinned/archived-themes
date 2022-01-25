@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<head>
+
+<!--
+
+    theme eleven: honey  by  pirateskinned
+    
+    please don't:  edit & repost / claim as your own
+    please don't:  delete or move the credit
+    please don't:  steal bits of coding
+    
+    if you need any help, feel free to
+    message me at pirateskinned.tumblr.com
+    
+    ------
+    
+    image wrapping inspired by iniziare.tumblr.com
+    tumblr controls styling by cyantists.tumblr.com
+    icon font by suiomi.com/font
+
+-->
+
+<title>{Title}</title>
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+<!-- meta tags -->
+
+<meta name="image:background" content=""/>
+<meta name="image:sidebar" content=""/>
+<meta name="image:popup" content=""/>
+
+<meta name="color:background" content="#ffffff"/>
+<meta name="color:container" content="#edf0f2"/>
+<meta name="color:posts" content="#ffffff"/>
+<meta name="color:border" content="#222222"/>
+<meta name="color:text" content="#1d1d1d"/>
+<meta name="color:link" content="#f7dfd9"/>
+<meta name="color:accent one" content="#ccbbad"/>
+<meta name="color:accent two" content="#84a3aa"/>
+<meta name="color:accent three" content="#c97354"/>
+
+<meta name="if:background pattern" content="0"/>
+<meta name="if:image wrap" content="1"/>
+<meta name="if:500px posts" content="0"/>
+
+<meta name="text:nav text" content="nav text block" />
+
+<meta name="text:link 1 url" content="/" />
+<meta name="text:link 1 title" content="link one" />
+<meta name="text:link 2 url" content="/" />
+<meta name="text:link 2 title" content="link two" />
+<meta name="text:link 3 url" content="/" />
+<meta name="text:link 3 title" content="link three" />
+<meta name="text:link 4 url" content="/" />
+<meta name="text:link 4 title" content="link four" />
+<meta name="text:link 5 url" content="/" />
+<meta name="text:link 5 title" content="link five" />
+<meta name="text:link 6 url" content="/" />
+<meta name="text:link 6 title" content="link six" />
+<meta name="text:link 7 url" content="/" />
+<meta name="text:link 7 title" content="link seven" />
+<meta name="text:link 8 url" content="/" />
+<meta name="text:link 8 title" content="link eight" />
+
+<!-- scripts -->
+
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<!-- fonts -->
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
+
+<!-- icon font -- http://suiomi.com/font -->
+
+<link href="//solrainha.github.io/saturnicons/saturnicons.css" rel="stylesheet">
+
+<!-- tooltips -->
+
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+
+<script>
+    (function($){
+        $(document).ready(function(){
+            $("a[title]").style_my_tooltips({
+                tip_follows_cursor:true,
+                tip_delay_time:30,
+                tip_fade_speed:300,
+                attribute:"title"
+            });
+        });
+    })(jQuery);
+</script>
+
+<!-- photosets -->
+
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+       $('.photo-slideshow').pxuPhotoset({
+           lightbox: true,
+           rounded: false,
+           gutter: '1px',
+           borderRadius: '0px',
+           photoset: '.photo-slideshow',
+           photoWrap: '.photo-data',
+           photo: '.pxu-photo'
+       });
+    });
+</script>
+
+<!-- navigation -->
+
+<script>
+$(document).ready(function() {
+    $('.nav #trigger').click(function() {
+        $('.entries').fadeOut();
+        $('.popup').fadeIn();
+    });
+    
+    $('.popup #close').click(function() {
+        $('.popup').fadeOut();
+        $('.entries').fadeIn();
+    });
+});
+</script>
+
+<style type="text/css">
+
+/* ---  tumblr controls styling by cyantists
+        http://cyantists.tumblr.com/tumblr_controls/hover --- */
+
+iframe.tmblr-iframe {
+    z-index:99999999999999!important;
+    top:-2px!important;
+    right:0!important;
+    opacity:0;
+    padding-right:38px;
+    /* delete invert(1) from here */
+        filter:invert(1) contrast(150%);
+        -webkit-filter:invert(1) contrast(150%);
+        -o-filter:invert(1) contrast(150%);
+        -moz-filter:invert(1) contrast(150%);
+        -ms-filter:invert(1) contrast(150%);
+    /* to here if your blog has a dark background */
+    transform:scale(0.65);
+    transform-origin:100% 0;
+    -webkit-transform:scale(0.65);
+    -webkit-transform-origin:100% 0;
+    -o-transform:scale(0.65);
+    -o-transform-origin:100% 0;
+    -moz-transform:scale(0.65);
+    -moz-transform-origin:100% 0;
+    -ms-transform:scale(0.65);
+    -ms-transform-origin:100% 0;}
+
+iframe.tmblr-iframe:hover {
+    opacity:0.6!important;}
+
+.hcontrols {
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:999999999;}
+
+.hcontrols svg {
+    width:14px;
+    height:14px;
+    padding:9px;}
+
+.hcontrols svg path {
+    fill:#888888;/* change this to change the color of the icon */}
+
+/* --- tooltips & scrollbars --- */
+
+#s-m-t-tooltip {
+    position:absolute;
+    margin-top: 15px;
+    z-index:9999;
+    padding:3px 5px;
+    background:{color:posts};
+    color:{color:text};
+    border-radius:3px;
+    font-size:10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba({RGBcolor:posts},0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba({RGBcolor:posts},0.5);
+    box-shadow: 0px 0px 5px 0px rgba({RGBcolor:posts},0.5);
+}
+
+::-webkit-scrollbar-thumb:vertical {background-color:{color:accent one};}
+::-webkit-scrollbar-button:horizontal {background-color:{color:accent one};}
+::-webkit-scrollbar {background-color:transparent; width:3px;}
+
+/* --- basics --- */
+
+body {
+    background-color:{color:background};
+    background-image:url('{image:background}');
+    background-attachment:fixed;
+    background-position:center center;
+    {block:ifnotbackgroundpattern}
+    background-repeat:no-repeat;
+    background-size:cover;
+    {/block:ifnotbackgroundpattern}
+    {block:ifbackgroundpattern}
+    background-repeat:repeat;
+    background-size:auto;
+    {/block:ifbackgroundpattern}
+    color:{color:text};
+    font-family: 'Work Sans', sans-serif;
+    font-size:10px;
+    line-height:15px;
+    font-weight:300;
+    text-align:justify;
+    margin:0;
+}
+
+a {
+    color:{color:text};
+    text-decoration:none;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+    a:hover {
+        color:{color:text};
+        text-decoration:none;
+    }
+    
+p a, .description a {box-shadow:{color:link} 0px -2px 0px inset;}
+p a:hover, .description a:hover {box-shadow:{color:link} 0px -17px 0px inset;}
+
+img {
+    border:none;
+    text-decoration:none;
+}
+
+b, strong, bold {
+    color:{color:accent one};
+    font-weight:700;
+}
+
+i, em, italic {
+    color:{color:accent two};
+}
+
+u {
+    text-decoration:none;
+}
+
+    .firstletter, u {
+        display:block;
+        float:left;
+        padding:12px 14px;
+        background:{color:accent one};
+        color:{color:posts};
+        font-weight:700;
+        text-transform:uppercase;
+        font-size:14px;
+        margin:0px 10px 0px 0px;
+    }
+
+s, strike {
+    text-decoration-color:{color:accent three};
+}
+
+small, sub, sup, big {
+    font-size:10px;
+    line-height:14px;
+    vertical-align:baseline;
+}
+
+blockquote {
+    padding:0px 5px 0px 15px;
+    border-left:1px solid {color:border};
+    margin-left:5px;
+    margin-right:0px;
+}
+
+    blockquote img {
+        max-width:360px;
+        height:auto;
+    }
+    
+        blockquote blockquote {
+            margin-right:0px;
+        }
+        
+            blockquote blockquote img {
+                max-width:350px;
+                height:auto;
+                margin-top:10px;
+            }
+
+pre {
+    font-family: 'Poppins', sans-serif;
+    font-size:10px;
+    text-transform:uppercase;
+    font-weight:700;
+    padding:10px;
+    background-color:{color:accent three};
+    color:{color:posts};
+    border-radius:3px;
+}
+
+    pre i, pre em, pre b, pre strong, pre a {
+        color:{color:posts};
+    }
+
+ul {
+    padding-left:15px;
+}
+
+    ul li {
+        list-style-type:none;
+    }
+    
+        ul li:before {
+          content: "— ";
+          text-indent: -5px;
+        }
+
+/* --- header styles --- */
+
+h1 {
+    margin:0px;
+    font-weight:bold;
+    color:{color:accent one};
+    text-align:left;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-weight:normal;
+    color:{color:accent three};
+    text-align:left;
+    text-transform:uppercase;
+    font-size:12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+    h2 b, b h2, h2 i, i h2,
+    h2 strong, strong h2, h2 em, em h2 {
+        color:{color:accent three};
+    }
+    
+
+/* --- container --- */
+
+.container {
+    position:absolute;
+    margin-top:-325px;
+    top:50%;
+    left:50%;
+    {block:ifnot500pxposts}
+    margin-left:-500px;
+    width:1000px;
+    {/block:ifnot500pxposts}
+    {block:if500pxposts}
+    margin-left:-550px;
+    width:1100px;
+    {/block:if500pxposts}
+    height:650px;
+    overflow:hidden;
+    background-color:{color:container};
+    border:1px solid {color:border};
+    box-shadow:5px 5px 0px {color:container}, 4px 6px 0px {color:border}, 6px 4px 0px {color:border}, 6px 6px 0px {color:border};
+}
+
+/* --- sidebar decorations --- */
+
+.svg-topleft {
+    z-index:30;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:auto;
+    width:450px;
+}
+
+.svg-dots {
+    z-index:60;
+    position:absolute;
+    top:130px;
+    left:35px;
+    height:auto;
+    width:150px;
+}
+
+.svg-grid {
+    z-index:25;
+    position:absolute;
+    top:295px;
+    left:40px;
+    height:auto;
+    width:170px;
+}
+
+.svg-bottomright {
+    z-index:1;
+    position:absolute;
+    right:0px;
+    bottom:-4px;
+    height:auto;
+    width:560px;
+}
+
+/* --- navigation --- */
+
+.nav {
+    position:absolute;
+    z-index:200;
+    left:285px;
+    top:230px;
+    width:180px;
+    height:20px;
+    text-align:right;
+    font-size:11px;
+}
+    
+    .nav a {
+        color:{color:text};
+        margin:0px 5px 0px 4px;
+    }
+    
+    .nav a:hover {
+        color:{color:accent three};
+    }
+    
+    .nav #trigger {
+        cursor:pointer;
+    }
+
+/* --- sidebar --- */
+
+.sidebar-img {
+    position:absolute;
+    z-index:50;
+    top:100px;
+    left:100px;
+    width:280px;
+    height:380px;
+    background-image:url('{image:sidebar}');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    border:1px solid {color:border};
+    box-shadow:5px 5px 0px {color:posts}, 4px 6px 0px {color:border}, 6px 4px 0px {color:border}, 6px 6px 0px {color:border};
+}
+
+/* --- sidebar title --- */
+
+.sidebar-title {
+    position:absolute;
+    z-index:150;
+    top:390px;
+    left:50px;
+    transform:rotate(-90deg);
+    width:400px;
+    height:60px;
+    text-align:right;
+    color:{color:accent three};
+    text-transform:lowercase;
+    font-size:52px;
+    line-height:60px;
+    font-weight:400;
+}
+
+/* --- description --- */
+
+.description {
+    position:absolute;
+    z-index:160;
+    left:285px;
+    top:250px;
+    width:90px;
+    height:60px;
+    overflow:hidden;
+    text-align:left;
+    border-top:1px solid {color:border};
+    padding:5px 90px 0px 0px;
+}
+   
+/* --- pagination --- */
+
+.pagination {
+    {block:ifnot500pxposts}
+    width:440px;
+    {/block:ifnot500pxposts}
+    {block:if500pxposts}
+    width:540px;
+    {/block:if500pxposts}
+    height:20px;
+    left:0px!important;
+    margin-top:-20px;
+    text-align:center;
+    padding:0px 0px 40px 0px!important;
+    color:{color:text};
+}
+
+    .pagination a {
+        color:{color:text};
+        line-height:20px;
+    }
+    
+    .pagination .sf {
+        font-size:7px;
+    }
+ 
+/* --- entries --- */
+
+.entries {
+    position:absolute;
+    z-index:3;
+    top:0px;
+    right:0px;
+    {block:ifnot500pxposts}
+    width:520px;
+    {/block:ifnot500pxposts}
+    {block:if500pxposts}
+    width:620px;
+    {/block:if500pxposts}
+    height:650px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background-color:transparent;
+    box-sizing:border-box;
+    padding:60px 60px 0px 20px;
+}
+
+/* --- posts --- */
+
+.post {
+    {block:ifnot500pxposts}
+    width:400px;
+    {/block:ifnot500pxposts}
+    {block:if500pxposts}
+    width:500px;
+    {/block:if500pxposts}
+    padding:20px;
+    overflow:hidden;
+    {block:IndexPage}
+    margin-bottom:60px;
+    {/block:IndexPage}
+    {block:PermalinkPage}
+    margin-bottom:60px;
+    {/block:PermalinkPage}
+    background-color:{color:posts};
+    border:1px solid {color:border};
+    box-shadow:5px 5px 0px {color:posts}, 4px 6px 0px {color:border}, 6px 4px 0px {color:border}, 6px 6px 0px {color:border};
+}
+
+    .post img {
+        max-width:100%;
+        height:auto;
+    }
+
+/* --- texts --- */
+
+.title {
+    font-weight:normal;
+    font-size:22px;
+    line-height:24px;
+    color:{color:accent three};
+    text-align:left;
+    font-family: 'Poppins', sans-serif;
+}
+    
+    .title a {
+        color:{color:accent three};
+    }
+
+.more a {
+    font-size:18px;
+    color:{color:accent three};
+}
+
+.txt {
+    margin-bottom:20px;
+}
+
+    .txt img {
+        max-width:200px;
+        border-radius:3px;
+        {block:ifimagewrap}
+        float:left;
+        margin-right:10px;
+        {/block:ifimagewrap}
+    }
+    
+    .txt blockquote img {
+        {block:ifimagewrap}
+        float:right;
+        margin-left:10px;
+        margin-right:0px;
+        {/block:ifimagewrap}
+    }
+    
+        .txt blockquote blockquote img {
+            {block:ifimagewrap}
+            float:left;
+            margin-left:0px;
+            margin-right:10px;
+            margin-top:0px;
+            {/block:ifimagewrap}
+        }
+
+/* --- photos --- */
+
+.photo {
+    margin:-20px -20px 0px -20px;
+}
+    
+.photo-slideshow {
+    margin:-20px -20px 0px -20px;
+}
+
+    .photo-slideshow img {
+        border-radius:0px;
+    }
+
+/* --- quotes --- */
+
+.quote {
+    text-align:left;
+    font-size:18px;
+    line-height:25px;
+    font-weight:400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.source {
+    margin-top:4px;
+    text-align:right;
+}
+
+/* --- audio --- */
+
+.audio {
+    float:left;
+    width:70px;
+    height:70px;
+    position:relative;
+    overflow:hidden;
+}
+
+    .audio:hover .play {opacity:1;width:30px;}
+    .audio:hover img {margin-left:30px;}
+ 
+.cover img {
+    width:70px;
+    position:absolute;
+    transition:0.5s ease;
+    -o-transition:0.5s ease;
+    -moz-transition:0.5s ease;
+    -webkit-transition:0.5s ease;
+}
+ 
+.play {
+    overflow:hidden;
+    width:0px;
+    height:30px;
+    background:{color:posts};
+    position:absolute;
+    padding:20px 0px;
+    transition:0.5s ease;
+    -o-transition:0.5s ease;
+    -moz-transition:0.5s ease;
+    -webkit-transition:0.5s ease;
+}
+ 
+.au b {
+    color:{color:accent one};
+    font-weight:700;
+    margin-right:2px;
+}
+ 
+.au {
+    height:45px;
+    overflow:hidden;
+    padding:12px 10px;
+    line-height:15px;
+    margin-left:70px;
+    text-align:left;
+}
+
+/* --- asks --- */
+
+.question {
+    margin:0px 0px 10px 0px;
+    border-radius:3px;
+    padding:20px;
+    background-color:{color:container};
+}
+
+    .asker {
+        float:left;
+        margin-right:2px;
+        color:{color:accent one};
+        font-weight:700;
+        text-transform:lowercase;
+    }
+
+/* --- chat --- */
+ 
+.chat ul {
+    list-style-type:none;
+    padding-left:0px;
+    margin-bottom:20px;
+}
+ 
+    .chat ul li:before {
+        content: none;
+        text-indent: 0px;
+    }
+   
+    .chat ul li {
+        margin-bottom:5px;
+    }
+   
+    .chat .label {
+        text-transform:uppercase;
+        font-weight:700;
+        color:{color:accent one};
+    }
+
+/* --- permalinks --- */
+
+.permalink {
+    font-weight:700;
+    margin:0px -20px -20px -20px;
+    padding:10px;
+    font-size:8px;
+    letter-spacing:0px;
+    text-transform:uppercase;
+    background-color:{color:posts};
+    border-top:1px solid {color:border};
+    border-radius:0px 0px 3px 3px;
+    color:{color:text};
+    font-family: 'Poppins', sans-serif;
+}
+
+    .permalink a {
+        display:inline-block;
+        color:{color:text};
+    }
+    
+.reb {
+    display:inline-block;
+    vertical-align:middle;
+    float:right;
+    font-size:10px;
+}
+
+    .reb i {
+        color:{color:text};
+    }
+
+/* --- tags --- */
+
+.tags {
+    margin-top:0px;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    text-align:justify;
+    font-weight:400;
+}
+ 
+    .tags a {
+        display:inline;
+        text-transform:none;
+        line-height:14px;
+        padding-bottom:1px;
+        margin:2px 4px 0px 0px;
+        color:{color:text};
+        border-bottom:1px solid transparent;
+    }
+    
+        .tags a:hover {
+            border-bottom:1px solid {color:text};
+        }
+
+/* --- notes --- */
+
+.pagenotes {
+    {block:IndexPage}
+    display: none!important;
+    {/block:IndexPage}
+    {block:ifnot500pxposts}
+    width:400px;
+    {/block:ifnot500pxposts}
+    {block:if500pxposts}
+    width:500px;
+    {/block:if500pxposts}
+    text-align:left;
+    background-color:{color:posts};
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:3px;
+    box-shadow:rgba(0,0,0,.05) 1px 1px 3px;
+}
+
+    .pagenotes img {
+        display:none;
+    }
+    
+    .pagenotes a {
+        color:{color:accent three};
+        font-weight:bold;
+    }
+    
+    .pagenotes ol {
+        list-style-type:none;
+        margin:0px;
+        padding:0px;
+    }
+    
+    .pagenotes ol li {
+        margin:5px;
+    }
+
+/* --- popup --- */
+
+.popup {
+    display:none;
+    position:absolute;
+    z-index:999;
+    top:0px;
+    left:500px;
+    height:650px;
+    {block:ifnot500pxposts}
+    width:500px;
+    {/block:ifnot500pxposts}
+    {block:if500pxposts}
+    width:600px;
+    {/block:if500pxposts}
+}
+
+    .popup #close {
+        position:absolute;
+        z-index:999;
+        top:20px;
+        right:20px;
+        font-size:16px;
+        cursor:pointer;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+    }
+    
+        .popup #close:hover {
+            color:{color:accent three};
+        }
+
+    .popup-title {
+        position:absolute;
+        z-index:200;
+        top:60px;
+        left:-10px;
+        width:250px;
+        height:50px;
+        text-align:left;
+        color:{color:accent three};
+        text-transform:lowercase;
+        font-size:45px;
+        line-height:50px;
+        font-weight:400;
+    }
+
+    .popup-img {
+        position:absolute;
+        z-index:50;
+        top:60px;
+        left:110px;
+        {block:ifnot500pxposts}
+        width:340px;
+        {/block:ifnot500pxposts}
+        {block:if500pxposts}
+        width:440px;
+        {/block:if500pxposts}
+        height:210px;
+        background-image:url('{image:popup}');
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center center;
+        border:1px solid {color:border};
+        box-shadow:5px 5px 0px {color:posts}, 4px 6px 0px {color:border}, 6px 4px 0px {color:border}, 6px 6px 0px {color:border};
+    }
+
+    .popup-desc {
+        position:absolute;
+        z-index:160;
+        left:30px;
+        top:240px;
+        {block:ifnot500pxposts}
+        width:190px;
+        {/block:ifnot500pxposts}
+        {block:if500pxposts}
+        width:290px;
+        {/block:if500pxposts}
+        height:250px;
+        padding:15px 20px 20px 20px;
+        box-sizing:border-box;
+        font-size:10px;
+        line-height:18px;
+        overflow-x:hidden;
+        overflow-y:auto;
+        background-color:{color:posts};
+        border:1px solid {color:border};
+        box-shadow:5px 5px 0px {color:posts}, 4px 6px 0px {color:border}, 6px 4px 0px {color:border}, 6px 6px 0px {color:border};
+    }
+    
+    .popup-nav {
+        position:absolute;
+        z-index:250;
+        top:320px;
+        {block:ifnot500pxposts}
+        left:260px;
+        {/block:ifnot500pxposts}
+        {block:if500pxposts}
+        left:360px;
+        {/block:if500pxposts}
+        width:auto;
+        height:auto;
+        text-align:left;
+    }
+        
+        .popup-nav a {
+            display:block;
+            width:auto;
+            height:20px;
+            font-size:16px;
+            line-height:20px;
+            margin:0px 0px 10px 0px;
+            text-transform:lowercase;
+            letter-spacing:1px;
+        }
+        
+            .popup-nav a:before {
+                content:'\e017';
+                font-family:'saturnicons';
+                font-size:60%;
+                margin-right:5px;
+            }
+        
+            .popup-nav a:hover {
+                color:{color:accent two};
+                font-style:italic;
+            }
+
+    .svg-line {
+        position:absolute;
+        z-index:888;
+        top:210px;
+        right:20px;
+        width:200px;
+        height:auto;
+    }
+
+    .svg-triangles {
+        position:absolute;
+        z-index:1;
+        left:-10px;
+        bottom:20px;
+        {block:ifnot500pxposts}
+        width:500px;
+        {/block:ifnot500pxposts}
+        {block:if500pxposts}
+        width:600px;
+        {/block:if500pxposts}
+        height:auto;
+    }
+    
+    
+/* --- credit --- */
+
+.credit a {
+    position:fixed;
+    font-size:14px;
+    right:10px;
+    bottom:10px;
+    text-align:center;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    color:{color:accent one};
+}
+
+
+{CustomCSS}
+
+</style>
+</head>
+<body>
+
+<div class="hcontrols"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M106.6,134c14.3,0,26-11.7,26-26s-11.7-26-26-26s-26,11.7-26,26S92.2,134,106.6,134z M106.6,94c7.7,0,14,6.3,14,14s-6.3,14-14,14s-14-6.3-14-14S98.9,94,106.6,94z M40.4,124.6l7.2,3.3c3,1.4,4.4,4.8,3.3,7.9l-2.8,7.4c-2.1,5.7-1.4,11.8,2.1,16.7c3.4,5,9,7.9,15,7.9c2.2,0,4.4-0.4,6.5-1.2l7.4-2.8c0.7-0.3,1.4-0.4,2.2-0.4c2.4,0,4.7,1.4,5.7,3.7l3.3,7.2c3,6.6,9.4,10.7,16.6,10.7s13.6-4.1,16.6-10.7l3.3-7.2c1-2.2,3.2-3.7,5.7-3.7c0.7,0,1.5,0.1,2.2,0.4l7.4,2.8c2.1,0.8,4.3,1.2,6.5,1.2c0,0,0,0,0,0c5.9,0,11.5-3,15-7.9c3.4-5,4.2-11.1,2.1-16.7l-2.8-7.4c-1.1-3.1,0.3-6.5,3.3-7.9l7.2-3.3c6.6-3,10.7-9.4,10.7-16.6s-4.1-13.6-10.7-16.6l-7.2-3.3c-3-1.4-4.4-4.8-3.3-7.9l2.8-7.4c2.1-5.7,1.4-11.8-2.1-16.7c-3.4-5-9-7.9-15-7.9c-2.2,0-4.4,0.4-6.5,1.2l-7.4,2.8c-0.7,0.3-1.4,0.4-2.2,0.4c-2.4,0-4.7-1.4-5.7-3.7l-3.3-7.2c-3-6.6-9.4-10.7-16.6-10.7S93,35.2,90,41.8l-3.3,7.2c-1,2.2-3.2,3.7-5.7,3.7c-0.7,0-1.5-0.1-2.2-0.4l-7.4-2.8c-2.1-0.8-4.3-1.2-6.5-1.2c-5.9,0-11.5,3-15,7.9c-3.4,5-4.2,11.1-2.1,16.7l2.8,7.4c1.1,3.1-0.3,6.5-3.3,7.9l-7.2,3.3c-6.6,3-10.7,9.4-10.7,16.6S33.8,121.6,40.4,124.6z M45.3,102.3l7.2-3.3c8.7-4,12.9-14.1,9.5-23l-2.8-7.4c-1-2.7,0-4.7,0.7-5.7c1.6-2.4,4.6-3.4,7.4-2.3l7.4,2.8c2.1,0.8,4.2,1.2,6.4,1.2c0,0,0,0,0,0c7.1,0,13.6-4.2,16.6-10.7l3.3-7.2c1.5-3.4,4.7-3.7,5.7-3.7s4.1,0.3,5.7,3.7l3.3,7.2c3,6.5,9.5,10.7,16.6,10.7c2.2,0,4.3-0.4,6.4-1.2l7.4-2.8c2.8-1,5.7,0,7.4,2.3c0.7,1,1.7,3,0.7,5.7l-2.8,7.4c-3.3,8.9,0.8,19,9.5,23l7.2,3.3c3.4,1.5,3.7,4.7,3.7,5.7s-0.3,4.1-3.7,5.7l-7.2,3.3c-8.7,4-12.9,14.1-9.5,23l2.8,7.4c1,2.7,0,4.7-0.7,5.7c-1.6,2.4-4.6,3.4-7.4,2.3l-7.4-2.8c-2.1-0.8-4.2-1.2-6.4-1.2c-7.1,0-13.6,4.2-16.6,10.7l-3.3,7.2c-1.5,3.4-4.7,3.7-5.7,3.7s-4.1-0.3-5.7-3.7l-3.3-7.2c-3-6.5-9.5-10.7-16.6-10.7c-2.2,0-4.3,0.4-6.4,1.2l-7.4,2.8c-2.8,1-5.7,0-7.4-2.3c-0.7-1-1.7-3-0.7-5.7l2.8-7.4c3.3-8.9-0.8-19-9.5-23l-7.2-3.3c-3.4-1.5-3.7-4.7-3.7-5.7S41.9,103.9,45.3,102.3z"/></svg></div>
+
+
+<div class="container">
+
+<div class="svg-topleft">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 423.48 508"><defs><style>.cls-1{fill:{color:accent one};}</style></defs><path class="cls-1" d="M0,476.93a30.23,30.23,0,0,0,24.5,29.74c12.16,2.33,24,2.21,34-5.45,18.84-14.45,28-40,33.53-64.67,14.59-64.7.39-132.88,14.94-197.58,9.1-40.48,32.52-91.75,69-101.56,37.89-10.18,83.58,27.81,122.5,30.27,33.46,2.12,66.26-17.2,87.71-45.82s32.47-65.52,36.26-102.52a189.37,189.37,0,0,0,1-19.34H0Z" transform="translate(0 0)"/></svg>
+</div>
+
+<div class="svg-dots">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.01 197.01"><defs><style>.cls-2{fill:{color:accent two};}</style></defs><path class="cls-2" d="M76.07,51.41c-.58,3.22,1.18,6.35,3.84,8.21a18.47,18.47,0,0,0,.2,4.16c1.49,9,14,10,17.38,1.8,1.28-3.12,2.14-6.25,3.84-9.18a94,94,0,0,0,5.82-10.94A8.47,8.47,0,0,0,104.34,35c1.7-3.42,1.53-7.37-1.8-9.89-3.06-2.31-8.16-1.77-10.36,1.56C91,28.33,89.83,30,88.63,31.56c-3.7,4.73-7.78,9.16-11.18,14.07A4.74,4.74,0,0,0,76.07,51.41Z"/><path class="cls-2" d="M155.57,67.14c-.8-1.72-4-1.74-4.09.48a28.55,28.55,0,0,1-.62,4.82A45.55,45.55,0,0,0,145,82a3.51,3.51,0,0,0,.49,3.68,12.56,12.56,0,0,0,.16,6.78c1.65,4.93,8.57,4.84,10.78.49,1.58-3.09,1-6.18,1.87-9.45s2.27-6.41,3.44-9.58C163.23,69.88,159,65.64,155.57,67.14Z"/><path class="cls-2" d="M109.64,106.66q-.52,1.08-1,2.16a8.48,8.48,0,0,0-2.38,2.66c-3.93,6.76-9,12.93-12,20.17-1.33,3.19.89,7.37,3.66,9,3.23,1.89,6.92,1.06,9.66-1.24a34.61,34.61,0,0,0,4.52-4.68,6.11,6.11,0,0,0,5.26-3.62,91.06,91.06,0,0,0,4.3-13.12,7.93,7.93,0,0,0-.9-6.38l.06-.22C123.18,104.9,112.71,100.45,109.64,106.66Z"/><path class="cls-2" d="M20.89,104.7c-.1.11-.2.23-.31.34a4.84,4.84,0,0,0-3.3-.46,7.18,7.18,0,0,0-7.81.56A15.74,15.74,0,0,0,4.27,112a46.64,46.64,0,0,0-3.71,6.58c-2.61,5.85,4.53,11.08,9.37,8.67a4.15,4.15,0,0,0,4.65-1.3l0,0c2.72-4.43,5.12-9,7.75-13.5a6.14,6.14,0,0,0,.75-2c.63-.88,1.28-1.75,2-2.6C27.28,105.17,23.18,102.37,20.89,104.7Z"/><path class="cls-2" d="M145,2.41a68.64,68.64,0,0,0-7.13,11.51c-1.65,3.61-.46,7.8,3.44,9.3s7.57-.79,8.78-4.59,1.42-8.11,3.07-11.74C155.57,1.5,147.85-2.92,145,2.41Z"/><path class="cls-2" d="M34.73,52.27c1.92-4,3.93-8,5.75-12.07a8.38,8.38,0,0,0,.83-1.31,24.67,24.67,0,0,0,1.06-2.44,12.75,12.75,0,0,1,2.87-2.35c1.66-1,1.07-4-1-3.84a1.38,1.38,0,0,0-.2,0c.39-7.81-11.56-10.57-14-2.25-.08.26-.17.53-.26.8a106.22,106.22,0,0,0-7.17,11.91,5.84,5.84,0,0,0,0,5.82c-.89,3.07-.17,6.37,2.87,8.15S33.16,55.62,34.73,52.27Z"/><path class="cls-2" d="M188.84,51c0,.48,0,1,0,1.43a.94.94,0,0,0,1.87,0l0-.44c2.74.89,6.1.07,7.47-2.82a5.89,5.89,0,0,0,5.89-4.23c2.24-7.9,5.36-15.73,6.68-23.86,1.69-5.28-6.39-7.77-8.44-3.06-.09-.35-.17-.7-.28-1a3.11,3.11,0,0,0-2.77-2.31c-.07-1.34-.17-2.7-.36-4.07-.28-2-3.49-1.84-3.92,0-2,8.61-4,17.26-5.14,26-1.67,3.17-3,6.6-3.14,9.82A5.29,5.29,0,0,0,188.84,51Z"/><path class="cls-2" d="M28.52,177.71a7.56,7.56,0,0,0,6.94-1.05c3.07-.21,6.25-2.22,6.78-5.36.72-2.25,1.28-4.54,2-6.77a6.82,6.82,0,0,0,.11-3.85c.39-2,.74-4.09.94-6.17.4-4.12-4-5.78-7.18-4.5-1.84-.71-4.29-.11-4.74,2.18-.21,1.11-.46,2.24-.66,3.37a8.87,8.87,0,0,0-3,2.83c-.29.31-.56.63-.85.94-.8.87-1.62,1.72-2.48,2.52a13.66,13.66,0,0,0-2.75,3,10.75,10.75,0,0,0-1,2.34,12.14,12.14,0,0,0-.07,2.43h0A8.54,8.54,0,0,0,28.52,177.71Z"/><path class="cls-2" d="M70.28,99.71a2.77,2.77,0,0,0-.15-.49c.84-2.24-2.25-3.68-3.86-2.37a3.49,3.49,0,0,0-3.71,2.86c-.5,2.47-1.64,4.31-2.69,6.56-1.54,3.3-.36,7.36,3.42,8.4,3.45,1,7.41-1.77,7.24-5.52C70.38,106,70.91,102.89,70.28,99.71Z"/><path class="cls-2" d="M83.94,182.37l-.66.77-1,1c-3.09,1.67-4.91,5.39-2.61,9.13,3.36,5.46,10.75,4.6,14.16-.25.93-1.32,1.76-2.71,2.58-4.12a4.68,4.68,0,0,0,2.14-2.33,28,28,0,0,0,2.07-5.31c0-.05,0-.1,0-.16.39-.58.81-1.15,1.17-1.71,1-1.5,1.91-3,2.78-4.56,1.72-3.08-2.12-5.62-4.64-3.58-1,.82-2,1.7-2.88,2.6A5.35,5.35,0,0,0,89.9,175c-1.69,2-3.24,4-4.88,6C84.67,181.51,84.29,181.93,83.94,182.37Z"/></svg>
+</div>
+
+<div class="svg-grid">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.35 196.45"><defs><style>.cls-3{fill:{color:border};}</style></defs><path class="cls-3" d="M8.94,196.36V.09S9,0,9.13,0s.2,0,.2.09V196.36s-.09.09-.2.09S8.94,196.41,8.94,196.36Z"/><path class="cls-3" d="M17.88,196.36V.09S18,0,18.07,0s.2,0,.2.09V196.36s-.09.09-.2.09S17.88,196.41,17.88,196.36Z"/><path class="cls-3" d="M26.82,196.36V.09S26.91,0,27,0s.2,0,.2.09V196.36s-.09.09-.2.09S26.82,196.41,26.82,196.36Z"/><path class="cls-3" d="M35.76,196.36V.09S35.85,0,36,0s.2,0,.2.09V196.36s-.09.09-.2.09S35.76,196.41,35.76,196.36Z"/><path class="cls-3" d="M44.7,196.36V.09s.09-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S44.7,196.41,44.7,196.36Z"/><path class="cls-3" d="M53.64,196.36V.09s.09-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S53.64,196.41,53.64,196.36Z"/><path class="cls-3" d="M62.58,196.36V.09s.09-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S62.58,196.41,62.58,196.36Z"/><path class="cls-3" d="M71.52,196.36V.09S71.6,0,71.71,0s.2,0,.2.09V196.36s-.09.09-.2.09S71.52,196.41,71.52,196.36Z"/><path class="cls-3" d="M80.46,196.36V.09s.08-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S80.46,196.41,80.46,196.36Z"/><path class="cls-3" d="M89.4,196.36V.09s.08-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S89.4,196.41,89.4,196.36Z"/><path class="cls-3" d="M98.34,196.36V.09s.08-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S98.34,196.41,98.34,196.36Z"/><path class="cls-3" d="M107.28,196.36V.09s.08-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S107.28,196.41,107.28,196.36Z"/><path class="cls-3" d="M116.22,196.36V.09s.08-.09.19-.09.2,0,.2.09V196.36s-.09.09-.2.09S116.22,196.41,116.22,196.36Z"/><path class="cls-3" d="M0,186.52c0-.11,0-.19.06-.19H126.3s0,.08,0,.19,0,.2,0,.2H.06S0,186.63,0,186.52Z"/><path class="cls-3" d="M0,176.79c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,176.89,0,176.79Z"/><path class="cls-3" d="M0,167.05c0-.11,0-.19.06-.19H126.3s0,.08,0,.19,0,.2,0,.2H.06S0,167.16,0,167.05Z"/><path class="cls-3" d="M0,157.32c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,157.43,0,157.32Z"/><path class="cls-3" d="M0,147.58c0-.1,0-.19.06-.19H126.3s0,.09,0,.19,0,.2,0,.2H.06S0,147.69,0,147.58Z"/><path class="cls-3" d="M0,137.85c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,138,0,137.85Z"/><path class="cls-3" d="M0,128.12c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,128.22,0,128.12Z"/><path class="cls-3" d="M0,118.38c0-.11,0-.19.06-.19H126.3s0,.08,0,.19,0,.2,0,.2H.06S0,118.49,0,118.38Z"/><path class="cls-3" d="M0,108.65c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,108.75,0,108.65Z"/><path class="cls-3" d="M0,98.91c0-.11,0-.19.06-.19H126.3s0,.08,0,.19,0,.2,0,.2H.06S0,99,0,98.91Z"/><path class="cls-3" d="M0,89.18c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,89.29,0,89.18Z"/><path class="cls-3" d="M0,79.44c0-.1,0-.19.06-.19H126.3s0,.09,0,.19,0,.2,0,.2H.06S0,79.55,0,79.44Z"/><path class="cls-3" d="M0,69.71c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,69.82,0,69.71Z"/><path class="cls-3" d="M0,60c0-.1,0-.19.06-.19H126.3s0,.09,0,.19,0,.2,0,.2H.06S0,60.08,0,60Z"/><path class="cls-3" d="M0,50.24c0-.11,0-.19.06-.19H126.3s0,.08,0,.19,0,.2,0,.2H.06S0,50.35,0,50.24Z"/><path class="cls-3" d="M0,40.51c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,40.61,0,40.51Z"/><path class="cls-3" d="M0,30.77c0-.11,0-.19.06-.19H126.3s0,.08,0,.19,0,.2,0,.2H.06S0,30.88,0,30.77Z"/><path class="cls-3" d="M0,21c0-.11,0-.2.06-.2H126.3s0,.09,0,.2,0,.19,0,.19H.06S0,21.15,0,21Z"/><path class="cls-3" d="M0,11.3c0-.1,0-.19.06-.19H126.3s0,.09,0,.19,0,.2,0,.2H.06S0,11.41,0,11.3Z"/></svg>
+</div>
+
+<div class="svg-bottomright">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424.2 241"><defs><style>.cls-4{fill:{color:accent three};}</style></defs><path class="cls-4" d="M.87,222.69c3.68-14.72,16.59-19.6,25.79-23.27,25.62-10.23,27.54-4.89,34.68-39.28,3.84-18.55,8.74-35.78,21.82-45.8,38-29.12,100.43,1.3,139.41,11,14.47,3.59,72.45,28.36,86,7.28,8.18-12.71,4.53-33.59,14.74-48,10.41-14.69,24.6-17.28,36.35-27.26,22.73-19.3-.93-18.13,7.33-46,5.85-19.79,34.93-9.78,57.2,1.65V241H2.8A25.59,25.59,0,0,1,.87,222.69Z" transform="translate(0 0)"/></svg>
+</div>
+
+
+
+<!-- sidebar -->
+
+<div class="sidebar-title">
+    {Title}
+</div>
+
+<div class="nav">
+        <a href="/">
+            <span class="sf sf-refresh"></span>
+        </a>
+        <a href="/ask">
+            <span class="sf sf-chat-o"></span>
+        </a>
+        <a id="trigger">
+            <span class="sf sf-plus"></span>
+        </a>
+    </div>
+
+<div class="sidebar-img"></div>
+
+<div class="description">{Description}</div>
+
+<!-- start of posts -->
+
+<div class="entries">
+
+{block:Posts}
+<div class="post" id="{PostID}">
+
+
+{block:Quote}
+    <div class="txt">
+        <div class="quote">{Quote}</div>
+        {block:Source}
+            <div class="source"><p>&mdash; {Source}</p></div>
+        {/block:Source}
+    </div>
+{/block:Quote}
+
+
+{block:Text}
+    <div class="txt">
+        {block:Title}
+            <div class="title">{Title}</div>
+        {/block:Title}
+        
+        {Body}
+        
+        {block:More}
+            <div class="more">
+                <a href="{Permalink}">continue reading...</a>
+            </div>
+        {/block:More}
+    </div>
+{/block:Text}
+
+{block:Link}
+    <div class="txt">
+        <div class="title">
+            <a href="{URL}">{Name}</a>
+        </div>
+        
+        {block:Description}
+            {Description}
+        {/block:Description}
+        
+        {block:More}
+            <div class="more">
+                <a href="{Permalink}">continue reading...</a>
+            </div>
+        {/block:More}
+    </div>
+{/block:Link}
+
+{block:Chat}
+    {block:Title}
+        <div class="title">{Title}</div>
+    {/block:Title}
+   
+    <div class="chat">
+        <ul>
+            {block:Lines}<li>{block:Label}<span class="label">{Label}</span>{/block:Label}
+    {Line}</li>{/block:Lines}
+        </ul>
+    </div>
+{/block:Chat}
+
+{block:Photo}
+    <div class="photo">
+        <img src="{PhotoURL-500}" alt="{PhotoAlt}">
+    </div>
+    {block:Caption}
+        <div class="txt">
+            {Caption}
+            
+            {block:More}
+                <div class="more">
+                    <a href="{Permalink}">continue reading...</a>
+                </div>
+            {/block:More}
+        </div>
+    {/block:Caption}
+{/block:Photo}
+
+{block:Photoset}
+    <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">
+        {block:Photos}
+            <div class="photo-data">
+                <div class="pxu-photo">
+                    <img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}">
+                </div>
+                
+                <a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a>
+            </div>
+        {/block:Photos}
+    </div>
+    {block:Caption}
+        <div class="txt">
+            {Caption}
+            
+            {block:More}
+                <div class="more">
+                    <a href="{Permalink}">continue reading...</a>
+                </div>
+            {/block:More}
+        </div>
+    {/block:Caption}
+{/block:Photoset}
+
+{block:Video}
+    <div class="photo">{Video-500}</div>
+    {block:Caption}<div class="txt">{Caption}</div>{/block:Caption}
+{/block:Video}
+
+{block:Audio}
+    <div class="txt">
+        <div class="audio">
+            {block:AlbumArt}
+                <div class="cover">
+                    <img src="{AlbumArtURL}">
+                </div>
+            {/block:AlbumArt}
+            
+            {block:AudioPlayer}
+                <div class="play">{AudioPlayerWhite}</div>
+            {/block:AudioPlayer}
+        </div>
+        
+        <div class="au">
+            {block:TrackName}<b>Track:</b> {block:TrackName}{TrackName}<br>{/block:TrackName}
+            {block:Artist}<b>Artist:</b> {Artist}<br>{/block:Artist}
+            <b>Plays:</b> {FormattedPlayCount}
+        </div>
+        
+        {block:Caption}{Caption}{/block:Caption}
+    </div>
+{/block:Audio}
+
+{block:Answer}
+    <div class="txt">
+        <div class="question">
+            <div class="asker">{Asker}</div> said, &ldquo;{Question}&rdquo;
+        </div>
+        {Answer}
+        
+        {block:More}
+            <div class="more">
+                <a href="{Permalink}">continue reading...</a>
+            </div>
+        {/block:More}
+    </div>
+{/block:Answer}
+
+
+{block:Date}
+    <div style="clear:both;"></div>
+    
+    <div class="permalink">
+        <a href="{Permalink}">
+            posted {TimeAgo}{block:NoteCount} with {NoteCountWithLabel}{/block:NoteCount}
+        </a>
+       
+        <a class="reb" href="{ReblogURL}">
+            <span class="sf sf-reblog"></span>
+        </a>
+       
+        {block:PermalinkPage}
+            {block:RebloggedFrom}
+            <br>
+            via: <a href="{ReblogParentURL}">{ReblogParentName}</a>
+            &nbsp;
+            {/block:RebloggedFrom}
+           
+            {block:ContentSource}
+            source: <a href="{SourceURL}">{SourceTitle}</a>
+            {/block:ContentSource}
+        {/block:PermalinkPage}
+       
+        <br>
+       
+        {block:HasTags}
+            <div class="tags">
+                {block:Tags} <a href="{TagURL}">#{Tag}</a>{/block:Tags}
+            </div>
+        {/block:HasTags}
+    </div>
+{/block:Date}
+
+
+</div> <!-- end of .post -->
+
+
+{block:PostNotes}
+    <div class="pagenotes">
+        {PostNotes}
+    </div>
+{/block:PostNotes}
+
+
+{/block:Posts}
+
+{block:Pagination}
+    <div class="pagination">
+    {block:PreviousPage}
+        <a href="{PreviousPage}"><span class="sf sf-chevron-left"></span></a>
+    {/block:PreviousPage}
+    
+    {CurrentPage} of {TotalPages}
+    
+    {block:NextPage}
+        <a href="{NextPage}"><span class="sf sf-chevron-right"></span></a>
+    {/block:NextPage}
+    </div>
+{/block:Pagination}
+
+</div> <!-- end of .entries -->
+
+<div class="popup">
+    <div class="popup-title">navigate</div>
+    
+    <div class="svg-line">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.74 154.46"><defs><style>.b-1{fill:{color:accent two};}</style></defs><path class="b-1" d="M325.58,32.87c4.81-1.88,4.74-7.75,1.92-10.38q12.67-4,25.26-8.29C358.43,12.26,355.81,4,350,5.35c-45.32,11-90,25.14-134.72,38.77a4.77,4.77,0,0,0-3.53.27l-5.72,2.54q-9.9,3-19.79,5.94-36.48,10.8-72.93,21.69Q68.11,88.06,22.9,101.61c-4.85,1.45-2.55,8.89,2.31,7.51l64.4-18.35q29.21-8.33,58.39-16.7Q99.45,97.91,52.53,124.91q-4.94,2.84-9.84,5.71-9.07,3.54-18.15,7.08a4.42,4.42,0,0,0-2.87,4.51c-4.61,2.43-9.22,4.86-13.81,7.33-6.32,3.39-.31,12.75,6,9.4q11.49-6.1,23.07-12,19.27-9.85,38.76-19.18C159.06,96.32,242.62,65.32,325.58,32.87Z" transform="translate(-5.18 -5.19)"/></svg>
+    </div>
+    
+    <div class="popup-img"></div>
+    
+    <div class="popup-desc">
+        {text:nav text}
+    </div>
+    
+    <div class="popup-nav">
+        {block:iflink1url}<a href="{text:link 1 url}">{text:link 1 title}</a>{/block:iflink1url}
+        {block:iflink2url}<a href="{text:link 2 url}">{text:link 2 title}</a>{/block:iflink2url}
+        {block:iflink3url}<a href="{text:link 3 url}">{text:link 3 title}</a>{/block:iflink3url}
+        {block:iflink4url}<a href="{text:link 4 url}">{text:link 4 title}</a>{/block:iflink4url}
+        {block:iflink5url}<a href="{text:link 5 url}">{text:link 5 title}</a>{/block:iflink5url}
+        {block:iflink6url}<a href="{text:link 6 url}">{text:link 6 title}</a>{/block:iflink6url}
+        {block:iflink7url}<a href="{text:link 7 url}">{text:link 7 title}</a>{/block:iflink7url}
+        {block:iflink8url}<a href="{text:link 8 url}">{text:link 8 title}</a>{/block:iflink8url}
+    </div>
+    
+    <div class="svg-triangles">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.56 192.44"><defs><style>.a-1{fill:{color:accent one};}.a-2{fill:{color:accent two};}.a-3{fill:{color:link};}</style></defs><path class="a-1" d="M148,99.76l2.8-4a1,1,0,0,0-.71-1.52l-4.86-.42a1,1,0,0,0-1,1.37l2.07,4.43A1,1,0,0,0,148,99.76Z"/><path class="a-1" d="M192.21,108.63,188.12,106a1,1,0,0,0-1.49.76l-.28,4.87a1,1,0,0,0,1.4.93l4.36-2.2A1,1,0,0,0,192.21,108.63Z"/><path class="a-1" d="M116.48,59.29l4,2.75a1,1,0,0,0,1.52-.72l.37-4.87a1,1,0,0,0-1.39-1l-4.4,2.11A1,1,0,0,0,116.48,59.29Z"/><path class="a-1" d="M255.13,50.8l.61-4.84a1,1,0,0,0-1.34-1l-4.5,1.9a1,1,0,0,0-.21,1.66l3.89,3A1,1,0,0,0,255.13,50.8Z"/><path class="a-1" d="M188.69,72.38l-.09-4.88a1,1,0,0,0-1.47-.81L183,69.21a1,1,0,0,0,0,1.67l4.27,2.37A1,1,0,0,0,188.69,72.38Z"/><path class="a-1" d="M214.28,160.87,209.77,159a1,1,0,0,0-1.33,1l.64,4.84a1,1,0,0,0,1.55.65l3.87-3A1,1,0,0,0,214.28,160.87Z"/><path class="a-1" d="M56.59,170.72l.52,4.86a1,1,0,0,0,1.54.67l3.94-2.88a1,1,0,0,0-.18-1.66l-4.46-2A1,1,0,0,0,56.59,170.72Z"/><path class="a-1" d="M112.8,138.26l-2.55-4.16a1,1,0,0,0-1.68,0l-2.33,4.29a1,1,0,0,0,.88,1.44l4.88-.13A1,1,0,0,0,112.8,138.26Z"/><path class="a-2" d="M104.37,93.86l-4.89,0a1,1,0,0,0-.84,1.45l2.42,4.24a1,1,0,0,0,1.68,0l2.46-4.22A1,1,0,0,0,104.37,93.86Z"/><path class="a-2" d="M152.46,135.76l-3.32,3.58a1,1,0,0,0,.5,1.6L154.4,142a1,1,0,0,0,1.14-1.24l-1.44-4.66A1,1,0,0,0,152.46,135.76Z"/><path class="a-2" d="M182.3,177.94l-4.83-.72a1,1,0,0,0-1,1.31l1.79,4.55a1,1,0,0,0,1.66.25l3-3.83A1,1,0,0,0,182.3,177.94Z"/><path class="a-2" d="M12.49,102.36l4.87.44a1,1,0,0,0,1-1.37L16.27,97a1,1,0,0,0-1.67-.15l-2.81,4A1,1,0,0,0,12.49,102.36Z"/><path class="a-2" d="M2.63,147.57l3.63-3.27a1,1,0,0,0-.35-1.64l-4.64-1.51A1,1,0,0,0,0,142.27l1,4.78A1,1,0,0,0,2.63,147.57Z"/><path class="a-2" d="M69.31,132.28,72,128.19a1,1,0,0,0-.76-1.5l-4.88-.26a1,1,0,0,0-.92,1.4l2.21,4.36A1,1,0,0,0,69.31,132.28Z"/><path class="a-2" d="M253.45,171.62,258,169.9a1,1,0,0,0,.28-1.65l-3.78-3.1a1,1,0,0,0-1.57.59l-.79,4.82A1,1,0,0,0,253.45,171.62Z"/><path class="a-3" d="M8.37,58.34l.33-4.87a1,1,0,0,0-1.39-.94L2.92,54.68a1,1,0,0,0-.11,1.68l4.05,2.72A1,1,0,0,0,8.37,58.34Z"/><path class="a-3" d="M36.39,141.91l-4.33,2.26a1,1,0,0,0-.07,1.68l4.12,2.62a1,1,0,0,0,1.49-.78l.2-4.87A1,1,0,0,0,36.39,141.91Z"/><path class="a-3" d="M237,91.94l3.19,3.69a1,1,0,0,0,1.65-.32l1.6-4.61a1,1,0,0,0-1.1-1.27l-4.79.92A1,1,0,0,0,237,91.94Z"/><path class="a-3" d="M10.64,191.92l2.26-4.33a1,1,0,0,0-.9-1.42l-4.88.21a1,1,0,0,0-.77,1.49L9,192A1,1,0,0,0,10.64,191.92Z"/><path class="a-3" d="M74.28,39.66l-4.88-.22a1,1,0,0,0-.9,1.42l2.26,4.33a1,1,0,0,0,1.67.07l2.63-4.11A1,1,0,0,0,74.28,39.66Z"/><path class="a-3" d="M135.26,181.29l-1.06,4.77a1,1,0,0,0,1.23,1.13l4.66-1.47a1,1,0,0,0,.37-1.63l-3.6-3.31A1,1,0,0,0,135.26,181.29Z"/><path class="a-3" d="M217.32,44.71l-4.12-2.62a1,1,0,0,0-1.49.78l-.21,4.88a1,1,0,0,0,1.42.9l4.33-2.26A1,1,0,0,0,217.32,44.71Z"/><path class="a-3" d="M253,5.24,251.38.64a1,1,0,0,0-1.65-.3l-3.16,3.73a1,1,0,0,0,.56,1.58l4.81.87A1,1,0,0,0,253,5.24Z"/><path class="a-2" d="M276.07,25.85l4.86.44a1,1,0,0,0,1-1.37l-2.06-4.43a1,1,0,0,0-1.67-.15l-2.81,4A1,1,0,0,0,276.07,25.85Z"/><path class="a-1" d="M316.06,74.88l-2.55-4.16a1,1,0,0,0-1.68,0l-2.33,4.29a1,1,0,0,0,.88,1.43l4.88-.12A1,1,0,0,0,316.06,74.88Z"/><path class="a-3" d="M336.5,35.27l.33-4.88a1,1,0,0,0-1.39-.93l-4.39,2.15a1,1,0,0,0-.11,1.67L335,36A1,1,0,0,0,336.5,35.27Z"/><path class="a-1" d="M298.39,183.3l2.8-4a1,1,0,0,0-.71-1.52l-4.87-.42a1,1,0,0,0-1,1.38l2.07,4.42A1,1,0,0,0,298.39,183.3Z"/><path class="a-2" d="M293.9,102.73l3.63-3.27a1,1,0,0,0-.35-1.64l-4.64-1.51a1,1,0,0,0-1.25,1.12l1,4.78A1,1,0,0,0,293.9,102.73Z"/><path class="a-3" d="M360.19,61.42l2.26-4.33a1,1,0,0,0-.9-1.42l-4.88.21a1,1,0,0,0-.77,1.49l2.61,4.12A1,1,0,0,0,360.19,61.42Z"/><path class="a-1" d="M340.67,132.34l2.79-4a1,1,0,0,0-.71-1.52l-4.86-.43a1,1,0,0,0-1,1.38l2.06,4.42A1,1,0,0,0,340.67,132.34Z"/><path class="a-2" d="M183.64,39.49l4.57-1.73a1,1,0,0,0,.28-1.65L184.71,33a1,1,0,0,0-1.57.59l-.8,4.82A1,1,0,0,0,183.64,39.49Z"/></svg>
+    </div>
+    
+    <span id="close" class="sf sf-cross"></span>
+</div>
+
+</div> <!-- end of .container -->
+
+<div class="credit"><a class="sf sf-boat" href="http://pirateskinned.tumblr.com/" title="coded by pirateskinned"></a></div>
+
+</body></html>
